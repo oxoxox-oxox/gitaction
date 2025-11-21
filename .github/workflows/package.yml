@@ -58,10 +58,13 @@ jobs:
       # You can refer to the macOS build steps above for guidance
       # - name: Build with PyInstaller (Windows x64)
       #   ...
+      - name: Build with PyInstaller (Windows x64)
+        run: |
+          pyinstaller --onefile app/hello.py -n hello-Windows x64
 
       - name: Debug dist
         shell: pwsh
-        run: dir dist || true
+        run: ls -la dist || true
 
       # Exercise 3: Implement artifact upload here
       # - name: Upload Windows artifact
