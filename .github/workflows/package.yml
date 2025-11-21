@@ -60,7 +60,7 @@ jobs:
       #   ...
       - name: Build with PyInstaller (Windows x64)
         run: |
-          pyinstaller --onefile app/hello.py -n hello-Windows x64
+          pyinstaller --onefile app/hello.py -n hello-Windows-x64
 
       - name: Debug dist
         shell: pwsh
